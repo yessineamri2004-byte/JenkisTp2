@@ -1,4 +1,3 @@
-```groovy
 pipeline {
     agent any
 
@@ -46,9 +45,9 @@ pipeline {
         success {
             echo 'Build OK'
         }
+
         failure {
             echo 'Build KO'
         }
     }
 }
-```
