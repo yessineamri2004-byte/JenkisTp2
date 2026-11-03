@@ -27,6 +27,8 @@ pipeline {
                 echo '=== TEST : Verification du projet ==='
                 bat 'git status'
                 bat 'if exist index.html (echo Fichier index.html trouve) else (echo Fichier index.html introuvable)'
+                sh 'grep -q "<html" index.html'
+                sh 'grep -q "<h1>" index.html'
             }
         }
 
